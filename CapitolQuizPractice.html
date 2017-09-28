@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	<meta charset="utf-8">
+	<title>TriviaGame</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<body>	
+
+	<div class="container">
+  <div class="jumbotron">
+    <h1>States Quiz</h1> 
+    <form id="quiz-form">
+    <label>     
+    <p> What state is this?</p>
+  </div>
+  <br>
+
+  <img style="-webkit-user-select: none;background-position: 0px 0px, 10px 10px;background-size: 20px 20px;background-image:linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),linear-gradient(45deg, #eee 25%, white 25%, white 75%, #eee 75%, #eee 100%);" src="https://upload.wikimedia.org/wikipedia/en/6/68/Wisconsin_outline.JPG">
+<br>
+
+<select id="Quiz-Answer">
+	<option value="Michigan">Michigan
+	</option>
+
+	<option value="Wisconsin">Wisconsin
+	</option>
+
+	<option value="Minnesota">Minnesota
+	</option>
+
+</select>
+
+</label> <br>
+
+<button type="submit">Check Answer</button>
+</form>
+
+<div id="result"></div>
+
+<button id = "start-button">Start</button>
+        <br>
+
+        <div id = "timer"></div>
+        <br>
+        <div id = "questionQ"></div>
+
+        <button id = "submit-button">Submit</button>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+
+$("#quiz-form").on("submit"),
+function(event) {
+	event.preventdefault();
+var $answer = $("#quiz-answer");
+var answer = $answer.val();
+console.log(answer);
+
+}
+
+if (answer === "Wisconsin") {
+	$("result").text("Well done, sir or madam!")
+}
+
+else { 
+	$("result").text("Go back to school!!!")
+}
+
+
+
+
+};
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
